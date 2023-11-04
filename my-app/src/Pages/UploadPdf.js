@@ -45,7 +45,7 @@ const UploadPdf = () => {
     }
   };
 
-  const newlyCreatedPdf = async (e) => {
+  const extracted = async (e) => {
     e.preventDefault();
     try {
       if (file && selectedPages.length > 0) {
@@ -149,7 +149,7 @@ const UploadPdf = () => {
           />
         ) : null}
         {selectedPages.length > 0 ? (
-          <button onClick={newlyCreatedPdf} className="upload-button">
+          <button onClick={extracted} className="upload-button">
             Extract PDF
           </button>
         ) : (
